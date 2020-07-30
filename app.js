@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const port = process.env.PORT || 5000;
 const logger = require("morgan");
 const router = require("./router");
@@ -10,6 +11,7 @@ dbConnection();
 
 // логирование запросов
 app.use(logger("dev"));
+app.use(cors("*"));
 app.use(express.json());
 
 // обработчик на / и ответ на запрос по этому пути "Weather Web-Craft-House"
