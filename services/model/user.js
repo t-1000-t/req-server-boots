@@ -15,6 +15,7 @@ const userSchema = new Schema(
       subscriptionStock: String,
       subscriptionWater: String,
       phoneNumber: Number,
+      date: Date,
     },
   },
   { timestamps: true }
